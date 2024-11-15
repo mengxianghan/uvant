@@ -1,0 +1,48 @@
+{
+  "name": "uvant",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "husky"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@antfu/eslint-config": "^3.8.0",
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@dcloudio/types": "^3.4.8",
+    "@uni-helper/uni-app-types": "1.0.0-alpha.6",
+    "@uni-helper/uni-types": "1.0.0-alpha.6",
+    "@uni-helper/vite-plugin-uni-components": "^0.1.0",
+    "@vue/tsconfig": "^0.6.0",
+    "components-helper": "^2.2.0",
+    "consola": "^3.2.3",
+    "eslint": "^9.14.0",
+    "eslint-plugin-vue": "^9.30.0",
+    "esno": "^4.8.0",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3",
+    "sass": "^1.80.6",
+    "simple-git-hooks": "^2.11.1",
+    "typescript": "^5.6.3",
+    "unbuild": "3.0.0-rc.11",
+    "vite": "5.4.6",
+    "vitepress": "^1.5.0",
+    "vue-tsc": "^1.0.24"
+  },
+  "dependencies": {
+    "vue": "3.4.21"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm line-staged",
+    "commit-msg": "npx commitlint --edit ${1}"
+  },
+  "lint-staged": {
+    "*.{vue,js,ts}": "eslint --fix",
+    "*.{scss,css,vue}": "stylelint  --fix --allow-empty-input",
+    "*.md": "markdownlint --fix --ignore-path=.gitignore"
+  }
+}

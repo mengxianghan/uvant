@@ -1,0 +1,17 @@
+{
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+        "declaration": true,
+        "lib": ["es2016", "dom"],
+        "types": [
+            "@types/lodash-es",
+            "@dcloudio/types",
+            "@uni-helper/uni-app-types"
+        ]
+    },
+    "vueCompilerOptions": {
+        "plugins": ["@uni-helper/uni-app-types/volar-plugin"]
+    },
+    "include": ["**/*.ts", "**/*.d.ts", "**/*.tsx", "**/*.vue"],
+    "exclude": ["**/dist/**", "**/locale/**"],
+}

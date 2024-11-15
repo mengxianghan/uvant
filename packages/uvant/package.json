@@ -1,0 +1,29 @@
+{
+    "name": "uvant",
+    "version": "1.0.0",
+    "description": "",
+    "type": "module",
+    "author": "mengxianghan",
+    "license": "MIT",
+    "keywords": [],
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "typings": "./dist/index.d.ts",
+    "web-types": "./web-types.json",
+    "vetur": {
+        "tags": "./tags.json",
+        "attributes": "./attributes.json"
+    },
+    "files": [],
+    "scripts": {
+        "build": "unbuild",
+        "lint": "eslint . --config ../../eslint.config.mjs"
+    },
+    "dependencies": {
+        "lodash-es": "^4.17.21"
+    },
+    "devDependencies": {
+        "@types/lodash-es": "^4.17.12"
+    }
+}

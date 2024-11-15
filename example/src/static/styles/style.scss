@@ -1,0 +1,15 @@
+page {
+    background: #f7f8fa;
+    font-size: 14px;
+}
+
+view,
+text {
+    box-sizing: border-box;
+}
+
+.demo-doc {
+    @apply pb-5 overflow-hidden;
+
+    min-height: calc(100svh - var(--window-top, 0) - var(--window-bottom, 0));
+}

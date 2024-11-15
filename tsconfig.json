@@ -1,0 +1,12 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.json",
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "strict": false,
+    "types": [
+      "vite/client",
+      "@dcloudio/types",
+      "@uni-helper/uni-app-types"
+    ]
+  }
+}
