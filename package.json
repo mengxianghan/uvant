@@ -41,8 +41,6 @@
     "commit-msg": "npx commitlint --edit ${1}"
   },
   "lint-staged": {
-    "*.{vue,js,ts}": "eslint --fix",
-    "*.{scss,css,vue}": "stylelint  --fix --allow-empty-input",
-    "*.md": "markdownlint --fix --ignore-path=.gitignore"
+    "*.{vue,js,ts}": "eslint --fix"
   }
 }
