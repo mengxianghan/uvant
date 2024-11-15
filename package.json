@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postinstall": "npx simple-git-hooks"
+    "prepare": "husky",
+    "postinstall": "npx prepare"
   },
   "keywords": [],
   "author": "",
@@ -26,7 +27,6 @@
     "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
     "sass": "^1.80.6",
-    "simple-git-hooks": "^2.11.1",
     "typescript": "^5.6.3",
     "unbuild": "3.0.0-rc.11",
     "vite": "5.4.6",
@@ -35,10 +35,6 @@
   },
   "dependencies": {
     "vue": "3.4.21"
-  },
-  "simple-git-hooks": {
-    "pre-commit": "pnpm line-staged",
-    "commit-msg": "npx commitlint --edit ${1}"
   },
   "lint-staged": {
     "*.{vue,js,ts}": "eslint --fix"
