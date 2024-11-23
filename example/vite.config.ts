@@ -1,6 +1,7 @@
 import { resolve } from 'node:path'
 import uni from '@dcloudio/vite-plugin-uni'
 import UniComponents from '@uni-helper/vite-plugin-uni-components'
+import UniLayouts from '@uni-helper/vite-plugin-uni-layouts'
 import autoprefixer from 'autoprefixer'
 import postcssRemToResponsivePixel from 'postcss-rem-to-responsive-pixel'
 import tailwindcss from 'tailwindcss'
@@ -16,6 +17,7 @@ export default defineConfig({
             dts: 'src/components.d.ts',
             resolvers: [UVantResolver()],
         }),
+        UniLayouts(),
         uni(),
         uvwt({
             // disabled: ['h5', 'app'].includes(process.env.UNI_PLATFORM),

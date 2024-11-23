@@ -1,15 +1,14 @@
 {
-  "name": "uvant-auto-import-resolver",
-  "version": "1.0.0",
-  "description": "",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "unbuild"
-  },
-  "keywords": [],
-  "author": "mengxianghan",
-  "license": "MIT"
+    "name": "uvant-auto-import-resolver",
+    "version": "1.0.0",
+    "description": "",
+    "author": "mengxianghan",
+    "license": "MIT",
+    "keywords": [],
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "scripts": {
+        "build": "unbuild"
+    }
 }

@@ -1,42 +1,49 @@
 {
-  "name": "uvant",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "prepare": "husky",
-    "postinstall": "npx prepare"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@antfu/eslint-config": "^3.8.0",
-    "@commitlint/cli": "^19.5.0",
-    "@commitlint/config-conventional": "^19.5.0",
-    "@dcloudio/types": "^3.4.8",
-    "@uni-helper/uni-app-types": "1.0.0-alpha.6",
-    "@uni-helper/uni-types": "1.0.0-alpha.6",
-    "@uni-helper/vite-plugin-uni-components": "^0.1.0",
-    "@vue/tsconfig": "^0.6.0",
-    "components-helper": "^2.2.0",
-    "consola": "^3.2.3",
-    "eslint": "^9.14.0",
-    "eslint-plugin-vue": "^9.30.0",
-    "esno": "^4.8.0",
-    "lint-staged": "^15.2.10",
-    "prettier": "^3.3.3",
-    "sass": "^1.80.6",
-    "typescript": "^5.6.3",
-    "unbuild": "3.0.0-rc.11",
-    "vite": "5.4.6",
-    "vitepress": "^1.5.0",
-    "vue-tsc": "^1.0.24"
-  },
-  "dependencies": {
-    "vue": "3.4.21"
-  },
-  "lint-staged": {
-    "*.{vue,js,ts}": "eslint --fix"
-  }
+    "name": "uvant",
+    "version": "1.0.0",
+    "description": "",
+    "author": "",
+    "license": "ISC",
+    "keywords": [],
+    "main": "index.js",
+    "scripts": {
+        "dev:h5": "pnpm --prefix example run dev:h5",
+        "docs:dev": "pnpm --prefix docs run dev",
+        "prepare": "husky",
+        "lint": "eslint . --fix"
+    },
+    "dependencies": {
+        "lodash-es": "^4.17.21",
+        "vue": "3.4.21"
+    },
+    "devDependencies": {
+        "@antfu/eslint-config": "^3.9.1",
+        "@commitlint/cli": "^19.5.0",
+        "@commitlint/config-conventional": "^19.5.0",
+        "@dcloudio/types": "^3.4.14",
+        "@types/lodash-es": "^4.17.12",
+        "@uni-helper/uni-app-types": "1.0.0-alpha.6",
+        "@uni-helper/uni-types": "1.0.0-alpha.6",
+        "@uni-helper/vite-plugin-uni-components": "^0.1.0",
+        "@vue/tsconfig": "^0.6.0",
+        "components-helper": "^2.2.0",
+        "consola": "^3.2.3",
+        "eslint": "^9.14.0",
+        "eslint-plugin-vue": "^9.31.0",
+        "esno": "^4.8.0",
+        "fs-extra": "^11.2.0",
+        "husky": "^9.1.6",
+        "lint-staged": "^15.2.10",
+        "prettier": "^3.3.3",
+        "rimraf": "^6.0.1",
+        "sass": "^1.78.0",
+        "typescript": "^5.6.3",
+        "unbuild": "3.0.0-rc.11",
+        "vite": "5.4.11",
+        "vitepress": "^1.5.0",
+        "vue-tsc": "^2.1.10"
+    },
+    "lint-staged": {
+        "*.{vue,js,ts}": "eslint . --fix"
+    }
 }

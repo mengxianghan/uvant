@@ -1,5 +1,5 @@
-import Locale from 'uvant/src/locale'
-import { camelize, createTranslate } from 'uvant/src/utils'
+import { Locale } from 'uvant/dist/locale'
+import { camelize, createTranslate } from 'uvant/dist/utils'
 
 export function initDemoLocale() {
     // add some basic locale messages

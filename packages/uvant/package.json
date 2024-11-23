@@ -1,11 +1,15 @@
 {
     "name": "uvant",
+    "type": "module",
     "version": "1.0.0",
     "description": "",
-    "type": "module",
     "author": "mengxianghan",
     "license": "MIT",
     "keywords": [],
+    "sideEffects": [
+        "*.scss",
+        "*/src/**/*.vue"
+    ],
     "main": "./dist/index.cjs",
     "module": "./dist/index.mjs",
     "types": "./dist/index.d.ts",
@@ -15,15 +19,17 @@
         "tags": "./tags.json",
         "attributes": "./attributes.json"
     },
-    "files": [],
+    "files": [
+        "attributes.json",
+        "dist",
+        "package.json",
+        "tags.json",
+        "web-types.json"
+    ],
     "scripts": {
-        "build": "unbuild",
-        "lint": "eslint . --config ../../eslint.config.mjs"
+        "build": "unbuild"
     },
     "dependencies": {
         "lodash-es": "^4.17.21"
-    },
-    "devDependencies": {
-        "@types/lodash-es": "^4.17.12"
     }
 }

@@ -13,6 +13,6 @@ onHide(() => {
 </script>
 
 <style lang="scss">
-@import '@/static/styles/index.scss';
+@import '@/styles/index.scss';
 @import 'uvant/src/styles/index.scss';
 </style>

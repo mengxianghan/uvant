@@ -1,8 +1,8 @@
-import {defineBuildConfig} from "unbuild";
+import { defineBuildConfig } from 'unbuild'
 
 export default defineBuildConfig({
     entries: ['./src/index.ts'],
-    externals: ["@uni-helper/vite-plugin-uni-components"],
+    externals: ['@uni-helper/vite-plugin-uni-components'],
     rollup: {
         emitCJS: true,
     },

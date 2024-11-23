@@ -14,7 +14,7 @@ export function UVantResolver(): ComponentResolver {
                 const kebabCaseName = kebabCase(partialName)
                 return {
                     name: partialName,
-                    from: `uvant/src/${kebabCaseName}/${kebabCaseName}.vue`,
+                    from: `uvant/dist/components/${kebabCaseName}/${kebabCaseName}.vue`,
                 }
             }
         },
