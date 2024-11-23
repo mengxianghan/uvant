@@ -2,10 +2,10 @@
 import { computed } from 'vue'
 import { isDef } from '../../utils'
 import VanIcon from '../icon/icon.vue'
-import { cellBem as bem, cellEmits, cellProps, cellName as name } from './cell'
+import { cellBem, cellEmits, cellName, cellProps } from './cell'
 
 defineOptions({
-    name,
+    name: cellName,
     options: {
         virtualHost: true,
         addGlobalClass: true,
@@ -55,7 +55,7 @@ function onClick(evt: MouseEvent) {
 <template>
     <view
         :class="
-            bem({
+            cellBem({
                 center: props.center,
                 clickable: props.isLink || props.clickable,
                 borderless: !props.border,
@@ -65,21 +65,21 @@ function onClick(evt: MouseEvent) {
         @click="onClick"
     >
         <template v-if="hasLeftIcon">
-            <view :class="bem('left-icon')">
+            <view :class="cellBem('left-icon')">
                 <slot name="icon">
                     <VanIcon :name="props.icon" />
                 </slot>
             </view>
         </template>
         <template v-if="hasTitle">
-            <view :class="bem('title')">
+            <view :class="cellBem('title')">
                 <view>
                     <slot name="title">
                         {{ props.title }}
                     </slot>
                 </view>
                 <template v-if="hasLabel">
-                    <view :class="bem('label')">
+                    <view :class="cellBem('label')">
                         <slot name="label">
                             {{ props.label }}
                         </slot>
@@ -88,14 +88,14 @@ function onClick(evt: MouseEvent) {
             </view>
         </template>
         <template v-if="hasValue">
-            <view :class="bem('value')">
+            <view :class="cellBem('value')">
                 <slot name="value">
                     {{ props.value }}
                 </slot>
             </view>
         </template>
         <template v-if="hasRightIcon">
-            <view :class="bem('right-icon')">
+            <view :class="cellBem('right-icon')">
                 <slot name="right-icon">
                     <VanIcon :name="arrow" />
                 </slot>

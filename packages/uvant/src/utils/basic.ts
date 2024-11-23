@@ -78,9 +78,50 @@ export function isBoolean(value: unknown): value is boolean {
 export function requestAnimationFrame(cb: () => void) {
     return setTimeout(() => {
         cb()
-    }, 1000 / 30)
+    }, 1000 / 30) as unknown as number
 }
 
 export const isPC = ['mac', 'windows', 'devtools'].includes(
     getSystemInfoSync().platform,
 )
+
+export const inBrowser = typeof window !== 'undefined'
+
+export function raf(fn: () => void): number {
+    return inBrowser ? requestAnimationFrame(fn) : -1
+}
+
+export function cancelRaf(id: number) {
+    if (inBrowser) {
+        cancelAnimationFrame(id)
+    }
+}
+
+// double raf for animation
+export function doubleRaf(fn: () => void): void {
+    raf(() => raf(fn))
+}
+
+export function getArrowByDirection(direction?: 'left' | 'right' | 'up' | 'down') {
+    let name: string
+
+    switch (direction) {
+        case 'left':
+            name = 'arrow-left'
+            break
+        case 'right':
+            name = 'arrow'
+            break
+        case 'up':
+            name = 'arrow-up'
+            break
+        case 'down':
+            name = 'arrow-down'
+            break
+        default:
+            name = 'arrow'
+            break
+    }
+
+    return name
+}

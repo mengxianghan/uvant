@@ -1,10 +1,11 @@
-import type { ExtractPropTypes, PropType } from 'vue'
+import type { CSSProperties, ExtractPropTypes, PropType } from 'vue'
 import type { CellArrowDirection, CellSize } from './types'
-import { createNamespace, numericProp, truthProp } from '../../utils'
+import { extend } from 'lodash-es'
+import { createNamespace, numericProp, truthProp, unknownProp } from '../../utils'
 
 export const { name: cellName, bem: cellBem } = createNamespace('cell')
 
-export const cellProps = {
+export const cellSharedProps = {
     icon: String,
     size: String as PropType<CellSize>,
     title: numericProp,
@@ -14,6 +15,10 @@ export const cellProps = {
     isLink: Boolean,
     border: truthProp,
     iconPrefix: String,
+    valueClass: unknownProp,
+    labelClass: unknownProp,
+    titleClass: unknownProp,
+    titleStyle: null as unknown as PropType<string | CSSProperties>,
     arrowDirection: String as PropType<CellArrowDirection>,
     required: {
         type: [Boolean, String] as PropType<boolean | 'auto'>,
@@ -24,6 +29,8 @@ export const cellProps = {
         default: null,
     },
 }
+
+export const cellProps = extend({}, cellSharedProps)
 
 export type CellProps = ExtractPropTypes<typeof cellProps>
 
