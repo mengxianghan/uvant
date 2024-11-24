@@ -267,6 +267,13 @@
                 "navigationBarTitleText": "Steps",
                 "enablePullDownRefresh": false
             }
+        },
+        {
+            "path": "pages/components/collapse",
+            "style": {
+                "navigationBarTitleText": "Collapse",
+                "enablePullDownRefresh": false
+            }
         }
     ],
     "globalStyle": {

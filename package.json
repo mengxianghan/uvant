@@ -7,8 +7,10 @@
     "keywords": [],
     "main": "index.js",
     "scripts": {
+        "dev": "pnpm run build && pnpm run dev:h5",
         "dev:h5": "pnpm --prefix example run dev:h5",
         "docs:dev": "pnpm --prefix docs run dev",
+        "build": "pnpm --prefix packages/uvant run build",
         "prepare": "husky",
         "lint": "eslint . --fix"
     },

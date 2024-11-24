@@ -74,7 +74,7 @@ const list = ref<Item[]>([
         children: [
             { key: 'Badge', name: '徽标', url: '/pages/components/badge' },
             { key: 'Circle', name: '环形进度条', url: '/pages/components/circle' },
-            { key: 'Collapse', name: '折叠面板', url: '' },
+            { key: 'Collapse', name: '折叠面板', url: '/pages/components/collapse' },
             { key: 'CountDown', name: '倒计时', url: '' },
             { key: 'Divider', name: '分割线', url: '/pages/components/divider' },
             { key: 'Empty', name: '空状态', url: '/pages/components/empty' },
@@ -141,7 +141,7 @@ function handleNavigator(url) {
         <view class="flex pl-6 items-center">
             <image
                 class="w-8 h-8"
-                src="/static/logo.png"
+                src="/static/logo.svg"
                 mode="scaleToFill"
             />
             <view class="text-[32px] ml-4">

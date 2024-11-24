@@ -88,13 +88,11 @@ export const isPC = ['mac', 'windows', 'devtools'].includes(
 export const inBrowser = typeof window !== 'undefined'
 
 export function raf(fn: () => void): number {
-    return inBrowser ? requestAnimationFrame(fn) : -1
+    return requestAnimationFrame(fn)
 }
 
 export function cancelRaf(id: number) {
-    if (inBrowser) {
-        cancelAnimationFrame(id)
-    }
+    cancelAnimationFrame(id)
 }
 
 // double raf for animation

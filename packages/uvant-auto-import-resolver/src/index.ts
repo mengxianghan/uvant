@@ -15,6 +15,7 @@ export function UVantResolver(): ComponentResolver {
                 return {
                     name: partialName,
                     from: `uvant/dist/components/${kebabCaseName}/${kebabCaseName}.vue`,
+                    // sideEffects: `uvant/dist/components/${kebabCaseName}/index.scss`,
                 }
             }
         },
