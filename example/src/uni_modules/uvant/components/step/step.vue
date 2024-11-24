@@ -30,6 +30,8 @@ const titleStyles = computed(() => {
     if (getStatus() === 'waiting') {
         return { color: parentProps.inactiveColor }
     }
+
+    return {}
 })
 const lineStyles = computed(() => ({
     background:
