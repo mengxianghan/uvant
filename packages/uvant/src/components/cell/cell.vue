@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { isDef } from '../../utils'
+import { getArrowByDirection, isDef } from '../../utils'
 import VanIcon from '../icon/icon.vue'
 import { cellBem, cellEmits, cellName, cellProps } from './cell'
 
@@ -17,35 +17,12 @@ const props = defineProps(cellProps)
 const emit = defineEmits(cellEmits)
 const slots = defineSlots()
 
-const hasLabel = computed(() => isDef(props.label) || slots.label)
-const hasLeftIcon = computed(() => isDef(props.icon) || slots.icon)
-const hasTitle = computed(() => isDef(props.title) || slots.title || hasLabel.value)
-const hasValue = computed(() => isDef(props.value) || slots.value)
-const hasRightIcon = computed(() => slots['right-icon'] || props.isLink)
-const arrow = computed(() => {
-    const { arrowDirection } = props
-    let name
-
-    switch (arrowDirection) {
-        case 'left':
-            name = 'arrow-left'
-            break
-        case 'right':
-            name = 'arrow'
-            break
-        case 'up':
-            name = 'arrow-up'
-            break
-        case 'down':
-            name = 'arrow-down'
-            break
-        default:
-            name = 'arrow'
-            break
-    }
-
-    return name
-})
+const showLabel = computed(() => isDef(props.label) || slots.label)
+const showLeftIcon = computed(() => isDef(props.icon) || slots.icon)
+const showTitle = computed(() => isDef(props.title) || slots.title || showLabel.value)
+const showValue = computed(() => isDef(props.value) || slots.value)
+const showRightIcon = computed(() => slots['right-icon'] || props.isLink)
+const arrow = computed(() => getArrowByDirection(props.arrowDirection))
 
 function onClick(evt: MouseEvent) {
     emit('click', evt)
@@ -64,21 +41,21 @@ function onClick(evt: MouseEvent) {
         "
         @click="onClick"
     >
-        <template v-if="hasLeftIcon">
+        <template v-if="showLeftIcon">
             <view :class="cellBem('left-icon')">
                 <slot name="icon">
                     <VanIcon :name="props.icon" />
                 </slot>
             </view>
         </template>
-        <template v-if="hasTitle">
+        <template v-if="showTitle">
             <view :class="cellBem('title')">
                 <view>
                     <slot name="title">
                         {{ props.title }}
                     </slot>
                 </view>
-                <template v-if="hasLabel">
+                <template v-if="showLabel">
                     <view :class="cellBem('label')">
                         <slot name="label">
                             {{ props.label }}
@@ -87,14 +64,14 @@ function onClick(evt: MouseEvent) {
                 </template>
             </view>
         </template>
-        <template v-if="hasValue">
+        <template v-if="showValue">
             <view :class="cellBem('value')">
                 <slot name="value">
                     {{ props.value }}
                 </slot>
             </view>
         </template>
-        <template v-if="hasRightIcon">
+        <template v-if="showRightIcon">
             <view :class="cellBem('right-icon')">
                 <slot name="right-icon">
                     <VanIcon :name="arrow" />
