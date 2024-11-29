@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { getCurrentInstance, onMounted, onUpdated, ref } from 'vue'
 import { useRect } from '../../composables'
-import { addUnit } from '../../utils'
+import { addUnit, type Numeric } from '../../utils'
 import { vcPlaceholderProps } from './vc-placeholder'
 
 defineOptions({
@@ -15,7 +15,7 @@ defineOptions({
 const props = defineProps(vcPlaceholderProps)
 
 const instance = getCurrentInstance()
-const height = ref(0)
+const height = ref<Numeric>('')
 
 onMounted(() => {
     init()
@@ -26,8 +26,9 @@ onUpdated(() => {
 })
 
 function init() {
-    if (props.disabled || !props.selector)
+    if (props.disabled || !props.selector) {
         return
+    }
 
     useRect(`.${props.selector}`, instance).then((data) => {
         if (!data) {
