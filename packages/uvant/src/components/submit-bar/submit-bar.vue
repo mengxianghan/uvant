@@ -67,7 +67,7 @@ function onSubmit() {
         :bem="bem"
         :selector="rootSelector"
     >
-        <view :class="[bem({ fixed: props.fixed }), { 'van-safe-area-bottom': props.safeAreaInsetBottom }]">
+        <view :class="[bem({ fixed: props.fixed }), { 'van-safe-area-bottom': props.safeAreaInsetBottom }, rootSelector]">
             <template v-if="hasTip">
                 <view :class="bem('tip')">
                     <template v-if="hasTipIcon">

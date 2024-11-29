@@ -27,7 +27,7 @@ $van-submit-bar-padding: var(--van-submit-bar-padding, 0 $van-padding-md);
 
     &--fixed {
         position: fixed;
-        bottom: 0;
+        bottom: var(--window-bottom);
         left: 0;
         z-index: $van-submit-bar-z-index;
     }
