@@ -1,7 +1,7 @@
 import type { ExtractPropTypes, PropType } from 'vue'
 import type { Interceptor, Numeric } from '../../utils'
 import type { TabsType } from './types.ts'
-import { createNamespace, isDef, isNumeric, makeNumericProp, makeStringProp, numericProp, truthProp } from '../../utils'
+import { createNamespace, isDef, makeNumericProp, makeStringProp, numericProp, truthProp } from '../../utils'
 
 export const { name: tabsName, bem: tabsBem } = createNamespace('tabs')
 
@@ -37,9 +37,9 @@ export const tabsProps = {
 export type TabsProps = ExtractPropTypes<typeof tabsProps>
 
 export const tabsEmits = {
-    change: (name: Numeric, title: Numeric) => isNumeric(name) && isDef(title),
+    change: (name: Numeric, title: Numeric) => isDef(name) && isDef(title),
     scroll: () => true,
-    rendered: (name: Numeric, title: Numeric) => isNumeric(name) && isNumeric(title),
+    rendered: (name: Numeric, title: Numeric) => isDef(name) && isDef(title),
     clickTab: (val: object) => val instanceof Object,
 }
 
