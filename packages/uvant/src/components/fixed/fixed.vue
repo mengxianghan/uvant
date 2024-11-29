@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-import { computed } from 'vue'
-import { addUnit, getSystemInfoSync } from '../../utils'
+import { computed, normalizeStyle } from 'vue'
+import { addUnit, createUniqueSelector, getSystemInfoSync } from '../../utils'
 import VcPlaceholder from '../vc-placeholder/vc-placeholder.vue'
-import { bem, fixedProps, name } from './fixed'
+import { fixedBem, fixedName, fixedProps } from './fixed'
 
 defineOptions({
-    name,
+    name: fixedName,
     options: {
         virtualHost: true,
         addGlobalClass: true,
@@ -14,6 +14,8 @@ defineOptions({
 })
 
 const props = defineProps(fixedProps)
+
+const [fixedSelector] = createUniqueSelector(fixedName)
 
 const styles = computed(() => {
     const { windowTop, windowBottom } = getSystemInfoSync()
@@ -30,14 +32,17 @@ const styles = computed(() => {
         <slot />
     </template>
     <template v-else>
-        <view
-            :class="bem()"
-            :style="styles"
-        >
-            <VcPlaceholder :disabled="!props.placeholder">
+        <VcPlaceholder :disabled="!props.placeholder" :selector="fixedSelector">
+            <view
+                :class="[fixedBem(), props.customClass, {
+                    'van-safe-area-bottom': props.safeAreaInsetBottom,
+                    'van-safe-area-top': props.safeAreaInsetTop,
+                }, fixedSelector]"
+                :style="normalizeStyle([styles, props.customStyle])"
+            >
                 <slot />
-            </VcPlaceholder>
-        </view>
+            </view>
+        </VcPlaceholder>
     </template>
 </template>
 
