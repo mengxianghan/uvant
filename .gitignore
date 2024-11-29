@@ -21,3 +21,4 @@ dist
 *.sw?
 
 docs/.vitepress/cache
+example/src/uni_modules
