@@ -224,6 +224,8 @@ importers:
 
   packages/uvant-auto-import-resolver: {}
 
+  packages/uvant-router: {}
+
 packages:
 
   '@algolia/autocomplete-core@1.17.7':
