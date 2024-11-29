@@ -1,6 +1,6 @@
 import type { ExtractPropTypes, PropType } from 'vue'
 import type { CheckboxLabelPosition, CheckboxShape } from './types.ts'
-import { createNamespace, isDef, numericProp, truthProp } from '../../utils'
+import { createNamespace, isDef, numericProp, truthProp, unknownProp } from '../../utils'
 
 export const { name: checkboxName, bem: checkboxBem } = createNamespace('checkbox')
 
@@ -14,6 +14,8 @@ export const checkboxProps = {
     checkedColor: String,
     bindGroup: truthProp,
     indeterminate: Boolean,
+    customClass: unknownProp,
+    customStyle: unknownProp,
 }
 export type CheckboxProps = ExtractPropTypes<typeof checkboxProps>
 

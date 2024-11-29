@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, useSlots, watch } from 'vue'
+import { computed, normalizeStyle, useSlots, watch } from 'vue'
 import { useExpose, useParent } from '../../composables'
 import { addUnit } from '../../utils'
 import { CHECKBOX_KEY } from '../checkbox-group'
@@ -141,14 +141,15 @@ defineExpose({ toggle })
 <template>
     <view
         :class="
-            bem([
+            [bem([
                 direction,
                 {
                     'disabled': props.disabled,
                     'label-disabled': props.labelDisabled,
                 },
-            ])
+            ]), props.customClass]
         "
+        :style="normalizeStyle(props.customStyle)"
         @click="onClick"
     >
         <view
