@@ -48,8 +48,9 @@ const styles = computed(() => {
         return style
     }
 
-    if (props.autosize)
+    if (props.autosize) {
         return style
+    }
 
     if (props.aspectRatio) {
         if (props.width) {
