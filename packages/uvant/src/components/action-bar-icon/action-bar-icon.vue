@@ -21,7 +21,10 @@ function onClick(evt: MouseEvent) {
 </script>
 
 <template>
-    <view :class="bem()" @click="onClick">
+    <view
+        :class="bem()"
+        @click="onClick"
+    >
         <slot name="icon">
             <view :class="bem('icon')">
                 <VanIcon

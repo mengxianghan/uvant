@@ -122,7 +122,8 @@ function onAfterLeave() {
             <!-- 关闭按钮 -->
             <template v-if="props.closeable">
                 <view
-                    class="van-haptics-feedback" :class="[
+                    class="van-haptics-feedback"
+                    :class="[
                         bem('close-icon', [props.closeIconPosition]),
                     ]"
                     @click="onClickCloseIcon"

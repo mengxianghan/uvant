@@ -90,7 +90,7 @@ const arrow = computed(() => {
 const hasWordLimit = computed(() => isDef(props.maxlength) && props.showWordLimit)
 
 const onInput = debounce(() => {
-    if (props.formatTrigger === 'onChange') {
+    if (props.formatTrigger === 'onChange' && props.formatter) {
         modelValue.value = props.formatter(modelValue.value)
     }
     emit('input', modelValue.value)

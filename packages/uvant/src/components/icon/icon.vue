@@ -42,7 +42,7 @@ function onClick(evt: MouseEvent) {
         :badge-props="props.badgeProps"
     >
         <view
-            :class="classes"
+            :class="[classes, props.customClass]"
             :style="normalizeStyle([styles, props.customStyle])"
             @click="onClick"
         >

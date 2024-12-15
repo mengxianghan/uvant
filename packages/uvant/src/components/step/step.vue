@@ -62,10 +62,17 @@ const onClickStep = () => parent.onClickStep(index.value)
 
 <template>
     <view :class="[BORDER, bem([parentProps.direction, { [status]: status }])]">
-        <view :class="bem('title', { active: isActive() })" :style="titleStyles" @click="onClickStep">
+        <view
+            :class="bem('title', { active: isActive() })"
+            :style="titleStyles"
+            @click="onClickStep"
+        >
             <slot />
         </view>
-        <view :class="bem('circle-container')" @click="onClickStep">
+        <view
+            :class="bem('circle-container')"
+            @click="onClickStep"
+        >
             <!-- active -->
             <template v-if="showActiveIcon">
                 <slot name="active-icon">
@@ -105,10 +112,16 @@ const onClickStep = () => parent.onClickStep(index.value)
             </template>
 
             <template v-else>
-                <view :class="bem('circle')" :style="lineStyles" />
+                <view
+                    :class="bem('circle')"
+                    :style="lineStyles"
+                />
             </template>
         </view>
-        <view :class="bem('line')" :style="lineStyles" />
+        <view
+            :class="bem('line')"
+            :style="lineStyles"
+        />
     </view>
 </template>
 

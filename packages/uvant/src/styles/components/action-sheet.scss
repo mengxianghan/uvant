@@ -2,42 +2,15 @@
 @import '../mixins/hairline';
 
 $van-uni-action-sheet-max-height: var(--van-uni-action-sheet-max-height, 80%);
-$van-uni-action-sheet-header-height: var(
-    --van-uni-action-sheet-header-height,
-    48px
-);
-$van-uni-action-sheet-header-font-size: var(
-    --van-uni-action-sheet-header-font-size,
-    $van-font-size-lg
-);
-$van-uni-action-sheet-item-background: var(
-    --van-uni-action-sheet-item-background,
-    $van-background-2
-);
-$van-uni-action-sheet-item-font-size: var(
-    --van-uni-action-sheet-item-font-size,
-    $van-font-size-lg
-);
-$van-uni-action-sheet-item-line-height: var(
-    --van-uni-action-sheet-item-line-height,
-    $van-line-height-lg
-);
-$van-uni-action-sheet-item-text-color: var(
-    --van-uni-action-sheet-item-text-color,
-    $van-text-color
-);
-$van-uni-action-sheet-cancel-text-color: var(
-    --van-uni-action-sheet-cancel-text-color,
-    $van-gray-7
-);
-$van-uni-action-sheet-cancel-padding-top: var(
-    --van-uni-action-sheet-cancel-padding-top,
-    $van-padding-xs
-);
-$van-uni-action-sheet-cancel-padding-color: var(
-    --van-uni-action-sheet-cancel-padding-color,
-    $van-background
-);
+$van-uni-action-sheet-header-height: var(--van-uni-action-sheet-header-height, 48px);
+$van-uni-action-sheet-header-font-size: var(--van-uni-action-sheet-header-font-size, $van-font-size-lg);
+$van-uni-action-sheet-item-background: var(--van-uni-action-sheet-item-background, $van-background-2);
+$van-uni-action-sheet-item-font-size: var(--van-uni-action-sheet-item-font-size, $van-font-size-lg);
+$van-uni-action-sheet-item-line-height: var(--van-uni-action-sheet-item-line-height, $van-line-height-lg);
+$van-uni-action-sheet-item-text-color: var(--van-uni-action-sheet-item-text-color, $van-text-color);
+$van-uni-action-sheet-cancel-text-color: var(--van-uni-action-sheet-cancel-text-color, $van-gray-7);
+$van-uni-action-sheet-cancel-padding-top: var(--van-uni-action-sheet-cancel-padding-top, $van-padding-xs);
+$van-uni-action-sheet-cancel-padding-color: var(--van-uni-action-sheet-cancel-padding-color, $van-background);
 $van-uni-action-sheet-radius: var(--van-uni-action-sheet-radius, 16px 16px 0 0);
 
 uni-actionsheet {

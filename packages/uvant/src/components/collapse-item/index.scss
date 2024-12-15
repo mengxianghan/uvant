@@ -15,7 +15,7 @@ $van-collapse-item-title-disabled-color: var(--van-collapse-item-title-disabled-
 
     &--border {
         &::after {
-           @include hairline-top($van-border-color, $van-padding-md, $van-padding-md);
+            @include hairline-top($van-border-color, $van-padding-md, $van-padding-md);
         }
     }
 

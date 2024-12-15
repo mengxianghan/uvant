@@ -3,46 +3,18 @@
 
 $van-picker-background: var(--van-picker-background, $van-background-2);
 $van-picker-toolbar-height: var(--van-picker-toolbar-height, 44px);
-$van-picker-title-font-size: var(
-    --van-picker-title-font-size,
-    $van-font-size-lg
-);
-$van-picker-title-line-height: var(
-    --van-picker-title-line-height,
-    $van-line-height-md
-);
+$van-picker-title-font-size: var(--van-picker-title-font-size, $van-font-size-lg);
+$van-picker-title-line-height: var(--van-picker-title-line-height, $van-line-height-md);
 $van-picker-action-padding: 0 var(--van-picker-action-padding, $van-padding-md);
-$van-picker-action-font-size: var(
-    --van-picker-action-font-size,
-    $van-font-size-md
-);
-$van-picker-confirm-action-color: var(
-    --van-picker-confirm-action-color,
-    $van-primary-color
-);
-$van-picker-cancel-action-color: var(
-    --van-picker-cancel-action-color,
-    $van-text-color-2
-);
-$van-picker-option-font-size: var(
-    --van-picker-option-font-size,
-    $van-font-size-lg
-);
-$van-picker-option-padding: 0
-    var(--van-picker-option-padding, $van-padding-base);
+$van-picker-action-font-size: var(--van-picker-action-font-size, $van-font-size-md);
+$van-picker-confirm-action-color: var(--van-picker-confirm-action-color, $van-primary-color);
+$van-picker-cancel-action-color: var(--van-picker-cancel-action-color, $van-text-color-2);
+$van-picker-option-font-size: var(--van-picker-option-font-size, $van-font-size-lg);
+$van-picker-option-padding: 0 var(--van-picker-option-padding, $van-padding-base);
 $van-picker-option-text-color: var(--van-text-color);
-$van-picker-option-disabled-opacity: var(
-    --van-picker-option-disabled-opacity,
-    0.3
-);
-$van-picker-loading-icon-color: var(
-    --van-picker-loading-icon-color,
-    $van-primary-color
-);
-$van-picker-loading-mask-color: var(
-    --van-picker-loading-mask-color,
-    rgba(255, 255, 255, 0.9)
-);
+$van-picker-option-disabled-opacity: var(--van-picker-option-disabled-opacity, 0.3);
+$van-picker-loading-icon-color: var(--van-picker-loading-icon-color, $van-primary-color);
+$van-picker-loading-mask-color: var(--van-picker-loading-mask-color, rgba(255, 255, 255, 0.9));
 $van-picker-mask-color: var(
     --van-picker-mask-color,
     linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.4)),

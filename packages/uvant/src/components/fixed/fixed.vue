@@ -32,7 +32,10 @@ const styles = computed(() => {
         <slot />
     </template>
     <template v-else>
-        <VcPlaceholder :disabled="!props.placeholder" :selector="fixedSelector">
+        <VcPlaceholder
+            :disabled="!props.placeholder"
+            :selector="fixedSelector"
+        >
             <view
                 :class="[fixedBem(), props.customClass, {
                     'van-safe-area-bottom': props.safeAreaInsetBottom,

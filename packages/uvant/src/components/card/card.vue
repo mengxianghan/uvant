@@ -80,13 +80,19 @@ function formatPrice() {
                 <view>
                     <!-- title -->
                     <slot name="title">
-                        <view class="van-multi-ellipsis--l2" :class="[bem('title')]">
+                        <view
+                            class="van-multi-ellipsis--l2"
+                            :class="[bem('title')]"
+                        >
                             {{ props.title }}
                         </view>
                     </slot>
                     <!-- desc -->
                     <slot name="desc">
-                        <view class="van-ellipsis" :class="[bem('desc')]">
+                        <view
+                            class="van-ellipsis"
+                            :class="[bem('desc')]"
+                        >
                             {{ props.desc }}
                         </view>
                     </slot>

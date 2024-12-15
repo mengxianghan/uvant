@@ -281,7 +281,10 @@ function startUpload() {
                             <view :class="bem('file-icon')">
                                 <VanIcon name="description" />
                             </view>
-                            <view class="van-ellipsis" :class="[bem('file-name')]">
+                            <view
+                                class="van-ellipsis"
+                                :class="[bem('file-name')]"
+                            >
                                 {{ item.name || item.url }}
                             </view>
                         </view>

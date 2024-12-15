@@ -17,14 +17,8 @@ $van-orange-light: var(--van-orange-light, #fffbe8);
 $van-green: var(--van-green, #07c160);
 
 // Gradient Colors
-$van-gradient-red: var(
-    --van-gradient-red,
-    linear-gradient(to right, #ff6034, #ee0a24)
-);
-$van-gradient-orange: var(
-    --van-gradient-orange,
-    linear-gradient(to right, #ffd01e, #ff8917)
-);
+$van-gradient-red: var(--van-gradient-red, linear-gradient(to right, #ff6034, #ee0a24));
+$van-gradient-orange: var(--van-gradient-orange, linear-gradient(to right, #ffd01e, #ff8917));
 
 // Component Colors
 $van-primary-color: var(--van-primary-color, $van-blue);
@@ -76,14 +70,7 @@ $van-base-font: var(
     'Microsoft Yahei',
     sans-serif
 );
-$van-price-font: var(
-    --van-price-font,
-    avenir-heavy,
-    'PingFang SC',
-    helvetica neue,
-    arial,
-    sans-serif
-);
+$van-price-font: var(--van-price-font, avenir-heavy, 'PingFang SC', helvetica neue, arial, sans-serif);
 /* stylelint-enable */
 
 // Animation

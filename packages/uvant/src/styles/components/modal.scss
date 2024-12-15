@@ -7,51 +7,18 @@ $van-uni-modal-font-size: var(--van-uni-modal-font-size, $van-font-size-lg);
 $van-uni-modal-transition: var(--van-uni-modal-transition, $van-duration-base);
 $van-uni-modal-radius: var(--van-uni-modal-radius, 16px);
 $van-uni-modal-background: var(--van-uni-modal-background, $van-background-2);
-$van-uni-modal-header-font-weight: var(
-    --van-uni-modal-header-font-weight,
-    $van-font-bold
-);
-$van-uni-modal-header-line-height: var(
-    --van-uni-modal-header-line-height,
-    24px
-);
-$van-uni-modal-header-padding-top: var(
-    --van-uni-modal-header-padding-top,
-    26px
-);
-$van-uni-modal-message-padding: var(
-    --van-uni-modal-message-padding,
-    $van-padding-lg
-);
-$van-uni-modal-message-font-size: var(
-    --van-uni-modal-message-font-size,
-    $van-font-size-md
-);
-$van-uni-modal-message-line-height: var(
-    --van-uni-modal-message-line-height,
-    van-line-height-md
-);
-$van-uni-modal-message-max-height: var(
-    --van-uni-modal-message-max-height,
-    60vh
-);
-$van-uni-modal-has-title-message-text-color: var(
-    --van-uni-modal-has-title-message-text-color,
-    $van-gray-7
-);
-$van-uni-modal-has-title-message-padding-top: var(
-    --van-uni-modal-has-title-message-padding-top,
-    $van-padding-xs
-);
+$van-uni-modal-header-font-weight: var(--van-uni-modal-header-font-weight, $van-font-bold);
+$van-uni-modal-header-line-height: var(--van-uni-modal-header-line-height, 24px);
+$van-uni-modal-header-padding-top: var(--van-uni-modal-header-padding-top, 26px);
+$van-uni-modal-message-padding: var(--van-uni-modal-message-padding, $van-padding-lg);
+$van-uni-modal-message-font-size: var(--van-uni-modal-message-font-size, $van-font-size-md);
+$van-uni-modal-message-line-height: var(--van-uni-modal-message-line-height, van-line-height-md);
+$van-uni-modal-message-max-height: var(--van-uni-modal-message-max-height, 60vh);
+$van-uni-modal-has-title-message-text-color: var(--van-uni-modal-has-title-message-text-color, $van-gray-7);
+$van-uni-modal-has-title-message-padding-top: var(--van-uni-modal-has-title-message-padding-top, $van-padding-xs);
 $van-uni-modal-button-height: var(--van-uni-modal-button-height, 48px);
-$van-uni-modal-button-font-size: var(
-    --van-uni-modal-button-font-size,
-    $van-font-size-lg
-);
-$van-uni-modal-confirm-button-text-color: var(
-    --van-uni-modal-confirm-button-text-color,
-    $van-primary-color
-);
+$van-uni-modal-button-font-size: var(--van-uni-modal-button-font-size, $van-font-size-lg);
+$van-uni-modal-confirm-button-text-color: var(--van-uni-modal-confirm-button-text-color, $van-primary-color);
 
 uni-modal {
     .uni-modal {

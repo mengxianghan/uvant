@@ -3,31 +3,16 @@
 $van-uni-toast-max-width: var(--van-uni-toast-max-width, 70%);
 $van-uni-toast-font-size: var(--van-uni-toast-font-size, $van-font-size-md);
 $van-uni-toast-text-color: var(--van-uni-toast-text-color, $van-white);
-$van-uni-toast-loading-icon-color: var(
-    --van-uni-toast-loading-icon-color,
-    $van-white
-);
-$van-uni-toast-line-height: var(
-    --van-uni-toast-line-height,
-    $van-line-height-md
-);
+$van-uni-toast-loading-icon-color: var(--van-uni-toast-loading-icon-color, $van-white);
+$van-uni-toast-line-height: var(--van-uni-toast-line-height, $van-line-height-md);
 $van-uni-toast-radius: var(--van-uni-toast-radius, $van-radius-lg);
 $van-uni-toast-background: var(--van-uni-toast-background, rgba(0, 0, 0, 0.7));
 $van-uni-toast-icon-size: var(--van-uni-toast-icon-size, 36px);
 $van-uni-toast-text-min-width: var(--van-uni-toast-text-min-width, 96px);
-$van-uni-toast-text-padding: var(
-    --van-uni-toast-text-padding,
-    $van-padding-xs $van-padding-sm
-);
-$van-uni-toast-default-padding: var(
-    --van-uni-toast-default-padding,
-    $van-padding-md
-);
+$van-uni-toast-text-padding: var(--van-uni-toast-text-padding, $van-padding-xs $van-padding-sm);
+$van-uni-toast-default-padding: var(--van-uni-toast-default-padding, $van-padding-md);
 $van-uni-toast-default-width: var(--van-uni-toast-default-width, 88px);
-$van-uni-toast-default-min-height: var(
-    --van-uni-toast-default-min-height,
-    88px
-);
+$van-uni-toast-default-min-height: var(--van-uni-toast-default-min-height, 88px);
 
 uni-toast {
     .uni-toast {
