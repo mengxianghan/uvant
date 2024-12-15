@@ -64,7 +64,10 @@ onMounted(() => {
         <div
             class="fixed bottom-40px rounded-20px overflow-hidden top-100px max-h-675px w-375px right-10 transition-all"
         >
-            <iframe :src="iframeUrl" class="border-none scrollbar-width-0 w-full h-full" />
+            <iframe
+                :src="iframeUrl"
+                class="border-none scrollbar-width-0 w-full h-full"
+            />
         </div>
     </template>
 </template>
