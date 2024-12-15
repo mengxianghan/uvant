@@ -12,6 +12,9 @@ export default antfu({
         'packages/uvant/tags.json',
         'packages/uvant/web-type.json',
     ],
+    formatters: {
+        css: true,
+    },
     stylistic: {
         indent: 4,
     },
@@ -22,5 +25,13 @@ export default antfu({
         'jsdoc/check-types': 'off',
         'jsdoc/require-returns-description': 'off',
         'node/prefer-global/process': 'off',
+        'vue/max-attributes-per-line': ['error', {
+            singleline: {
+                max: 1,
+            },
+            multiline: {
+                max: 1,
+            },
+        }],
     },
 })
