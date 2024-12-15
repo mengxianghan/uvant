@@ -45,7 +45,10 @@ function toggleAll() {
 
 <template>
     <view class="demo-collapse">
-        <demo-block :title="t('basicUsage')" :card="false">
+        <demo-block
+            :title="t('basicUsage')"
+            :card="false"
+        >
             <van-collapse v-model="active1">
                 <van-collapse-item :title="t('title') + 1">
                     {{ t('text1') }}
@@ -59,8 +62,14 @@ function toggleAll() {
             </van-collapse>
         </demo-block>
 
-        <demo-block :title="t('accordion')" :card="false">
-            <van-collapse v-model="active2" accordion>
+        <demo-block
+            :title="t('accordion')"
+            :card="false"
+        >
+            <van-collapse
+                v-model="active2"
+                accordion
+            >
                 <van-collapse-item :title="t('title') + 1">
                     {{ t('text1') }}
                 </van-collapse-item>
@@ -73,21 +82,33 @@ function toggleAll() {
             </van-collapse>
         </demo-block>
 
-        <demo-block :title="t('disabled')" :card="false">
+        <demo-block
+            :title="t('disabled')"
+            :card="false"
+        >
             <van-collapse v-model="active3">
                 <van-collapse-item :title="t('title') + 1">
                     {{ t('text1') }}
                 </van-collapse-item>
-                <van-collapse-item :title="t('title') + 2" disabled>
+                <van-collapse-item
+                    :title="t('title') + 2"
+                    disabled
+                >
                     {{ t('text2') }}
                 </van-collapse-item>
-                <van-collapse-item :title="t('title') + 3" disabled>
+                <van-collapse-item
+                    :title="t('title') + 3"
+                    disabled
+                >
                     {{ t('text3') }}
                 </van-collapse-item>
             </van-collapse>
         </demo-block>
 
-        <demo-block :title="t('titleSlot')" :card="false">
+        <demo-block
+            :title="t('titleSlot')"
+            :card="false"
+        >
             <van-collapse v-model="active4">
                 <van-collapse-item>
                     <template #title>
@@ -105,24 +126,45 @@ function toggleAll() {
             </van-collapse>
         </demo-block>
 
-        <demo-block :title="t('toggleAll')" :card="false">
-            <van-collapse ref="collapse" v-model="active5">
-                <van-collapse-item :title="t('title') + 1" name="1">
+        <demo-block
+            :title="t('toggleAll')"
+            :card="false"
+        >
+            <van-collapse
+                ref="collapse"
+                v-model="active5"
+            >
+                <van-collapse-item
+                    :title="t('title') + 1"
+                    name="1"
+                >
                     {{ t('text1') }}
                 </van-collapse-item>
-                <van-collapse-item :title="t('title') + 2" name="2">
+                <van-collapse-item
+                    :title="t('title') + 2"
+                    name="2"
+                >
                     {{ t('text2') }}
                 </van-collapse-item>
-                <van-collapse-item :title="t('title') + 3" name="3">
+                <van-collapse-item
+                    :title="t('title') + 3"
+                    name="3"
+                >
                     {{ t('text3') }}
                 </van-collapse-item>
             </van-collapse>
 
             <view class="demo-collapse-buttons">
-                <van-button type="primary" @click="openAll">
+                <van-button
+                    type="primary"
+                    @click="openAll"
+                >
                     {{ t('openAll') }}
                 </van-button>
-                <van-button type="primary" @click="toggleAll">
+                <van-button
+                    type="primary"
+                    @click="toggleAll"
+                >
                     {{ t('inverse') }}
                 </van-button>
             </view>

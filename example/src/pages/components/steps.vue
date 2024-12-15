@@ -39,7 +39,10 @@ function nextStep() {
 </script>
 
 <template>
-    <demo-block :title="t('basicUsage')" :card="false">
+    <demo-block
+        :title="t('basicUsage')"
+        :card="false"
+    >
         <van-steps :active="active">
             <van-step>{{ t('step1') }}</van-step>
             <van-step>{{ t('step2') }}</van-step>
@@ -47,12 +50,18 @@ function nextStep() {
             <van-step>{{ t('step4') }}</van-step>
         </van-steps>
 
-        <van-button custom-class="!ml-4 !mt-4" @click="nextStep">
+        <van-button
+            custom-class="!ml-4 !mt-4"
+            @click="nextStep"
+        >
             {{ t('nextStep') }}
         </van-button>
     </demo-block>
 
-    <demo-block :title="t('customStyle')" :card="false">
+    <demo-block
+        :title="t('customStyle')"
+        :card="false"
+    >
         <van-steps
             :active="active"
             active-icon="success"
@@ -66,8 +75,14 @@ function nextStep() {
         </van-steps>
     </demo-block>
 
-    <demo-block :title="t('title3')" :card="false">
-        <van-steps :active="0" direction="vertical">
+    <demo-block
+        :title="t('title3')"
+        :card="false"
+    >
+        <van-steps
+            :active="0"
+            direction="vertical"
+        >
             <van-step>
                 <view>{{ t('status1') }}</view>
                 <view>2016-07-12 12:40</view>
