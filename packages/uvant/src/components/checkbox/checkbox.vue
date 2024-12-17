@@ -172,7 +172,9 @@ defineExpose({ toggle })
                     :class="bem('icon-default')"
                     :style="iconStyles"
                 >
-                    <VanIcon :name="props.indeterminate ? 'minus' : 'success'" />
+                    <template v-if="props.indeterminate || checked">
+                        <VanIcon :name="props.indeterminate ? 'minus' : 'success'" />
+                    </template>
                 </view>
             </slot>
         </view>
